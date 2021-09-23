@@ -25,8 +25,23 @@ class DetailScreen extends StatelessWidget {
       height: MediaQuery.of(context).size.height / 2,
       child: Column(
         children: [
-          Image.asset(
-            'assets/recipes/recipe-${recipe.id}.png',
+          Image.network(
+            '${imageServer}recipe-${recipe.id}.png',
+            loadingBuilder: (BuildContext context, Widget child,
+                ImageChunkEvent? loadingProgress) {
+              if (loadingProgress == null) {
+                return child;
+              }
+              return Center(
+                child: CircularProgressIndicator(
+                  color: const Color(0xffe09601),
+                  value: loadingProgress.expectedTotalBytes != null
+                      ? loadingProgress.cumulativeBytesLoaded /
+                          loadingProgress.expectedTotalBytes!
+                      : null,
+                ),
+              );
+            },
             errorBuilder: (ctx, obj, trace) {
               return FittedBox(
                 child: Column(
@@ -51,6 +66,32 @@ class DetailScreen extends StatelessWidget {
               );
             },
           ),
+          // Image.asset(
+          //   'assets/recipes/recipe-${recipe.id}.png',
+          //   errorBuilder: (ctx, obj, trace) {
+          //     return FittedBox(
+          //       child: Column(
+          //         children: const [
+          //           Icon(Icons.error, size: 60, color: Colors.redAccent),
+          //           SizedBox(height: 20),
+          //           Text(
+          //             'Ouve um erro ao tentar carregar esta Receita.',
+          //             style: TextStyle(
+          //               fontWeight: FontWeight.bold,
+          //             ),
+          //           ),
+          //           SizedBox(height: 20),
+          //           Text(
+          //             'Imagem não encontrada.',
+          //             style: TextStyle(
+          //               fontStyle: FontStyle.italic,
+          //             ),
+          //           ),
+          //         ],
+          //       ),
+          //     );
+          //   },
+          // ),
           const SizedBox(height: 30),
           const Center(
             child: Text(
