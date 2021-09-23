@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sky_wiki/screens/homo_screen.dart';
+import 'package:sky_wiki/screens/home/homo_screen.dart';
 
 void main() async {
   runApp(const MyApp());
