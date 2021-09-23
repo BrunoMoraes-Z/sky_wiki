@@ -1,20 +1,14 @@
 {
-    "image_server": "https://image.prntscr.com/image/",
+    "image_server": "https://raw.githubusercontent.com/BrunoMoraes-Z/sky_wiki/assets/images/",
     "recipes": [
       {
         "id": "1a9a007a-7611-458f-ad87-6af0e1cc408b",
         "item_name": "Portal para Vilarejo",
-        "item_image": "v-OdevanQkyyC3jRZO0vKw",
-        "recipe_image": "",
-        "recipe_ingredients": [
-          
-        ]
+        "recipe_ingredients": []
       },
       {
         "id": "4e84ed99-dc8a-428c-a8f9-e60539eca9ba",
         "item_name": "Portal para Selva",
-        "item_image": "z3JJZ56-TwiHn-sLFH7U0g",
-        "recipe_image": "l-iQhXxwQ5OftgPE5iANhw",
         "recipe_ingredients": [
           "128 x Madeira da Selva",
           "16 x Pérola do Fim"
