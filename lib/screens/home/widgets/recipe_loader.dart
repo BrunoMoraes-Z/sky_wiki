@@ -50,7 +50,7 @@ class _RecipeLoaderState extends State<RecipeLoader> {
                     await NDialog(
                       title: Center(
                         child: Text(
-                          recipes[index].item_name,
+                          recipes[index].itemName,
                           style: const TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 17,

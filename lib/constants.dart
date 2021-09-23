@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 const Color backgroundColor = Color(0xffECECEC);
 final Uri recipesUrl = Uri.parse(
-  'https://gist.githubusercontent.com/BrunoMoraes-Z/3e0b30ec7dafafeef8befdce094cd7d3/raw/a48e65a4ea678a8669b31a423f7730b19f568978/recipes.json',
+  'https://gist.githubusercontent.com/BrunoMoraes-Z/3e0b30ec7dafafeef8befdce094cd7d3/raw/2f7c9962c136df0570b2ed60ce84cffd7d111e87/recipes.json',
 );
 // final File recipesFile = File.fromUri(Uri.file('../assets/data/recipes.json'));
 final BoxShadow shadow = BoxShadow(

@@ -16,13 +16,13 @@ class RecipeCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var itemUrl = '$imageServer${recipe.item_image}.png';
+    // var itemUrl = '$imageServer${recipe.itemImage}.png';
 
     Widget card = FittedBox(
       child: Container(
         padding: const EdgeInsets.only(bottom: 10),
         child: InkWell(
-          onTap: recipe.recipe_image.isNotEmpty ? onTap : null,
+          onTap: recipe.recipeImage.isNotEmpty ? onTap : null,
           child: Container(
             height: 60,
             padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -33,16 +33,10 @@ class RecipeCard extends StatelessWidget {
             ),
             child: Row(
               children: [
-                Image.network(
-                  itemUrl,
-                  headers: const {
-                    'Access-Control-Allow-Origin': '*',
-                    'Access-Control-Allow-Methods': 'GET,HEAD,POST,OPTIONS',
-                  },
-                ),
+                Image.asset('assets/recipes/item-${recipe.id}.png'),
                 const SizedBox(width: 10),
                 Text(
-                  recipe.item_name,
+                  recipe.itemName,
                   style: const TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 17,
@@ -55,7 +49,7 @@ class RecipeCard extends StatelessWidget {
       ),
     );
 
-    return recipe.recipe_image.isNotEmpty
+    return recipe.recipeImage.isNotEmpty
         ? card
         : Tooltip(
             message: 'Este item não possui Receita.',
