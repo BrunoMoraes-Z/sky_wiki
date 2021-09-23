@@ -9,7 +9,7 @@ import 'package:sky_wiki/screens/detail/detail_screen.dart';
 import 'package:sky_wiki/screens/home/widgets/recipe_card.dart';
 
 class RecipeLoader extends StatefulWidget {
-  RecipeLoader({Key? key}) : super(key: key);
+  const RecipeLoader({Key? key}) : super(key: key);
 
   @override
   _RecipeLoaderState createState() => _RecipeLoaderState();

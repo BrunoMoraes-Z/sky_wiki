@@ -25,61 +25,32 @@ class DetailScreen extends StatelessWidget {
       height: MediaQuery.of(context).size.height / 2,
       child: Column(
         children: [
-          Image.asset('assets/recipes/recipe-${recipe.id}.png'),
-          // Image.network(
-          //   recipeUrl,
-          //   headers: const {
-          //     'Access-Control-Allow-Origin': '*',
-          //     'Access-Control-Allow-Methods': 'GET,HEAD,POST,OPTIONS',
-          //   },
-          //   fit: BoxFit.fill,
-          //   // loadingBuilder: (ctx, obj, loadingProgress) {
-          //   //   if (loadingProgress == null) return Container();
-          //   //   return Row(
-          //   //     children: [
-          //   //       CircularProgressIndicator(
-          //   //         color: const Color(0xffE09601),
-          //   //         value: loadingProgress.expectedTotalBytes != null
-          //   //             ? loadingProgress.cumulativeBytesLoaded /
-          //   //                 loadingProgress.expectedTotalBytes!.toInt()
-          //   //             : null,
-          //   //       ),
-          //   //       const SizedBox(width: 32),
-          //   //       const Text(
-          //   //         'Carregando...',
-          //   //         style: TextStyle(fontWeight: FontWeight.w600),
-          //   //       ),
-          //   //     ],
-          //   //   );
-          //   // },
-          //   errorBuilder: (ctx, obj, trace) {
-          //     return FittedBox(
-          //       child: Column(
-          //         children: const [
-          //           Icon(
-          //             Icons.error,
-          //             size: 60,
-          //             color: Colors.redAccent,
-          //           ),
-          //           SizedBox(height: 20),
-          //           Text(
-          //             'Ouve um erro ao tentar carregar esta Receita.',
-          //             style: TextStyle(
-          //               fontWeight: FontWeight.bold,
-          //             ),
-          //           ),
-          //           SizedBox(height: 20),
-          //           Text(
-          //             'Imagem não encontrada.',
-          //             style: TextStyle(
-          //               fontStyle: FontStyle.italic,
-          //             ),
-          //           ),
-          //         ],
-          //       ),
-          //     );
-          //   },
-          // ),
+          Image.asset(
+            'assets/recipes/recipe-${recipe.id}.png',
+            errorBuilder: (ctx, obj, trace) {
+              return FittedBox(
+                child: Column(
+                  children: const [
+                    Icon(Icons.error, size: 60, color: Colors.redAccent),
+                    SizedBox(height: 20),
+                    Text(
+                      'Ouve um erro ao tentar carregar esta Receita.',
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    SizedBox(height: 20),
+                    Text(
+                      'Imagem não encontrada.',
+                      style: TextStyle(
+                        fontStyle: FontStyle.italic,
+                      ),
+                    ),
+                  ],
+                ),
+              );
+            },
+          ),
           const SizedBox(height: 30),
           const Center(
             child: Text(
@@ -89,6 +60,7 @@ class DetailScreen extends StatelessWidget {
           ),
           const SizedBox(height: 10),
           const Divider(),
+          const SizedBox(height: 5),
           Column(
             children: List.generate(
               recipe.recipeIngredients.length,
