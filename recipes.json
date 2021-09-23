@@ -13,6 +13,14 @@
           "128 x Madeira da Selva",
           "16 x Pérola do Fim"
         ]
+      },
+      {
+        "id": "7bfbe590-47de-4790-8798-0988a403655d",
+        "item_name": "Portal para Caminho dos Eucaliptos",
+        "recipe_ingredients": [
+          "128 x Madeira de Eucalipto",
+          "16 x Pérola do Fim"
+        ]
       }
     ]
   }
