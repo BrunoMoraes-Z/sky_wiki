@@ -12,7 +12,7 @@ content = {}
 
 with open('recipes.json') as r:
     data = r.read()
-    content = json.loads(data)
+    content = json.loads(data.replace('Ã©', 'é'))
 
 print(f'Receitas Atuais: {len(content["recipes"])}')
 
