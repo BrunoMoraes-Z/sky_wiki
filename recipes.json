@@ -1,26 +1,104 @@
 {
-    "image_server": "https://raw.githubusercontent.com/BrunoMoraes-Z/sky_wiki/assets/images/",
-    "recipes": [
-      {
-        "id": "1a9a007a-7611-458f-ad87-6af0e1cc408b",
-        "item_name": "Portal para Vilarejo",
-        "recipe_ingredients": []
-      },
-      {
-        "id": "4e84ed99-dc8a-428c-a8f9-e60539eca9ba",
-        "item_name": "Portal para Selva",
-        "recipe_ingredients": [
-          "128 x Madeira da Selva",
-          "16 x Pérola do Fim"
-        ]
-      },
-      {
-        "id": "7bfbe590-47de-4790-8798-0988a403655d",
-        "item_name": "Portal para Caminho dos Eucaliptos",
-        "recipe_ingredients": [
-          "128 x Madeira de Eucalipto",
-          "16 x Pérola do Fim"
-        ]
-      }
-    ]
-  }
+  "image_server": "https://raw.githubusercontent.com/BrunoMoraes-Z/sky_wiki/assets/images/",
+  "recipes": [
+    {
+      "id": "1a9a007a-7611-458f-ad87-6af0e1cc408b",
+      "item_name": "Portal para Vilarejo",
+      "recipe_ingredients": []
+    },
+    {
+      "id": "4e84ed99-dc8a-428c-a8f9-e60539eca9ba",
+      "item_name": "Portal para Selva",
+      "recipe_ingredients": [
+        "128 x Madeira da Selva",
+        "16 x PÃ©rola do Fim"
+      ]
+    },
+    {
+      "id": "7bfbe590-47de-4790-8798-0988a403655d",
+      "item_name": "Portal para Caminho dos Eucaliptos",
+      "recipe_ingredients": [
+        "128 x Madeira de Eucalipto",
+        "16 x PÃ©rola do Fim"
+      ]
+    },
+    {
+      "id": "69d56a88-2d6e-4f60-86db-2ace1d5f76b2",
+      "item_name": "Portal para Fazenda",
+      "recipe_ingredients": [
+        "80 x Batatas",
+        "48 x Cenouras",
+        "16 x PÃ©rolas do Fim"
+      ]
+    },
+    {
+      "id": "2e646aaa-521b-49d2-b8db-7b4d68ded060",
+      "item_name": "Portal para Floresta Escura",
+      "recipe_ingredients": [
+        "128 x Madeiras de Carvalho Escuro",
+        "16 x Pérolas do Fim"
+      ]
+    },
+    {
+      "id": "0bcb54a3-814a-4540-b1b4-904a43bc0ec1",
+      "item_name": "Portal para The End",
+      "recipe_ingredients": [
+        "80 x Pedras do Fim",
+        "48 x Obsidiana",
+        "16 x Pérolas do Fim Encantada"
+      ]
+    },
+    {
+      "id": "0e4586b4-826f-4895-bb50-fa5c02cf3df1",
+      "item_name": "Portal para Mina",
+      "recipe_ingredients": [
+        "80 x Blocos de Lápis-Lazúli",
+        "48 X Redstones",
+        "16 x Pérolas do Fim"
+      ]
+    },
+    {
+      "id": "a3f813d9-9342-48d0-bca4-b119b113e1f0",
+      "item_name": "Portal para Taiga",
+      "recipe_ingredients": [
+        "128 x Madeiras de Pinheiro",
+        "16 x Pérolas do Fim"
+      ]
+    },
+    {
+      "id": "835fa5d0-44f6-467f-9a05-2de004e5da2e",
+      "item_name": "Portal para Savana",
+      "recipe_ingredients": [
+        "128 x Madeiras de Acácia",
+        "16 x Pérolas do Fim"
+      ]
+    },
+    {
+      "id": "33064864-e01e-4117-844a-8d86f422bcb2",
+      "item_name": "Portal para Nether",
+      "recipe_ingredients": [
+        "80 x Rochas do Nether",
+        "48 x Tijolos do Nether",
+        "16 x Pérolas do Fim"
+      ]
+    },
+    {
+      "id": "462585c2-82e2-4659-bc10-5b31fa2172f8",
+      "item_name": "Portal para Covil das Aranhas",
+      "recipe_ingredients": [
+        "80 x Cascalhos",
+        "48 x Teias",
+        "16 x Pérolas do Fim"
+      ]
+    },
+    {
+      "id": "8c582b1f-8ab6-4d8f-9202-e9f11ba5a469",
+      "item_name": "Portal para Cânion",
+      "recipe_ingredients": [
+        "48 x Sementes de Cacau",
+        "16 x Pérolas do Fim",
+        "80 x Cactos"
+      ]
+    }
+  ]
+}
