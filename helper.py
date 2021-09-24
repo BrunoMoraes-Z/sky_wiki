@@ -3,6 +3,19 @@ from PIL import ImageGrab
 import uuid
 import json
 
+#
+# Para Poder adicionar de maneira mais facil novos itens.
+#
+# 1º Execute o arquivo, o mesmo ficara em loop
+# 2º Informe o nome do item e prescione ENTER
+# 3º tire um print do icone e deixe a imagem salva no CTRL+C (com lightshot é simples)
+# 4º prescione ENTER no terminal e repita o mesmo processo do passo 3º mas agora para o resultado do craft
+# 5º Informe material por material da seguinte maneira ->     QTD x NOME
+#                                 exemplo: 128 x Madeira da Selva
+# 6º para finalizar a receita basta prescionar ENTER quando Tiver na adição de um material para finalizar a receita &
+# ENTER quando estiver informando o nome do item para finalizar a criação de novos itens e finalizar o programa.
+#
+
 def savePrint(tp:str, uid: str):
     im = ImageGrab.grabclipboard()
     im.save(f'./images/{tp}-{uid}.png','PNG')
@@ -10,9 +23,9 @@ def savePrint(tp:str, uid: str):
 itens = []
 content = {}
 
-with open('recipes.json') as r:
+with open('recipes.json', 'r', encoding='utf8') as r:
     data = r.read()
-    content = json.loads(data.replace('Ã©', 'é'))
+    content = json.loads(data)
 
 print(f'Receitas Atuais: {len(content["recipes"])}')
 
