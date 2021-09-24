@@ -1,7 +1,10 @@
 import win32clipboard
 from PIL import ImageGrab
+from pyautogui import press
+import pyautogui
 import uuid
 import json
+import time
 
 #
 # Para Poder adicionar de maneira mais facil novos itens.
@@ -15,6 +18,13 @@ import json
 # 6º para finalizar a receita basta prescionar ENTER quando Tiver na adição de um material para finalizar a receita &
 # ENTER quando estiver informando o nome do item para finalizar a criação de novos itens e finalizar o programa.
 #
+
+def showPrintArea(x, y):
+    press("printscreen")
+    df = 100
+    pyautogui.mouseDown(button='left', x=df, y=df)
+    pyautogui.mouseDown(button='left', x=df + x, y=df + y)
+    pyautogui.mouseUp(button='left', x=df + x, y=df + y)
 
 def savePrint(tp:str, uid: str):
     im = ImageGrab.grabclipboard()
@@ -34,8 +44,10 @@ while True:
     name = input('Nome Do Item: ')
     if name == '':
         break
+    showPrintArea(31, 31)
     tmp = input('Icone:')
     savePrint('item', uid.__str__())
+    showPrintArea(317, 171)
     tmp = input('Recipe:')
     savePrint('recipe', uid.__str__())
     its = []
@@ -55,15 +67,6 @@ while True:
     print(item)
     print('-'*60)
 
-# itens.append({
-#     'id': '69d56a88-2d6e-4f60-86db-2ace1d5f76b2',
-#         'item_name': 'Portal para Fazenda',
-#         'recipe_ingredients': [
-#             '48 x Cenouras',
-#             '80 x Batatas',
-#             '16 x Pérolas do Fim'
-#         ]
-# })
 print(' ')
 print('-'*60)
 print(' ')
@@ -72,5 +75,5 @@ print(' ')
 print('Salvando Arquivo')
 for r in itens:
     content['recipes'].append(r)
-with open('recipes.json', 'w', encoding='utf8') as f:
-    json.dump(content, f, ensure_ascii=False)
+# with open('recipes.json', 'w', encoding='utf8') as f:
+    # json.dump(content, f, ensure_ascii=False)
